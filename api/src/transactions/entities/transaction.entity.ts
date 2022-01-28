@@ -1,7 +1,7 @@
 export class Transaction {
   id: string;
-  date: string;
-  amount: string;
+  date: Date;
+  amount: number;
   currency: string;
-  client_id: number;
+  clientId: number;
 }

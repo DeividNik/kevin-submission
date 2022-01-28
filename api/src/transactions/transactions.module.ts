@@ -3,7 +3,7 @@ import { TransactionsService } from './transactions.service';
 import { TransactionsController } from './transactions.controller';
 import { Repository } from './repository';
 import { CurrenciesService } from 'src/currencies/currencies.service';
-import { CurrenciesHttpClient } from 'src/currencies/currenciesHttpClient.service';
+import { DiscountsService } from './discounts.service';
 
 @Module({
   controllers: [TransactionsController],
@@ -11,7 +11,7 @@ import { CurrenciesHttpClient } from 'src/currencies/currenciesHttpClient.servic
     TransactionsService,
     Repository,
     CurrenciesService,
-    CurrenciesHttpClient,
+    DiscountsService,
   ],
 })
 export class TransactionsModule {}

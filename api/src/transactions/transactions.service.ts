@@ -21,8 +21,9 @@ export class TransactionsService {
     );
 
     return this.repository.saveTransaction({
-      ...createTransactionDto,
-      amount: `${convertedAmount}`,
+      date: new Date(createTransactionDto.date),
+      clientId: createTransactionDto.client_id,
+      amount: convertedAmount,
       currency: Currency.EUR,
     });
   }
