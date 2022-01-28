@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TransactionsService } from './transactions.service';
 import { TransactionsController } from './transactions.controller';
-import { Repository } from './repositories/repository';
+import { Repository } from './repository';
 import { CurrenciesService } from 'src/currencies/currencies.service';
 import { CurrenciesHttpClient } from 'src/currencies/currenciesHttpClient.service';
 

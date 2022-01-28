@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { CurrenciesService } from 'src/currencies/currencies.service';
+import { Currency } from 'src/currencies/enums';
 import { CreateTransactionDto } from './dto/create-transaction.dto';
 import { Transaction } from './entities/transaction.entity';
-import { Repository } from './repositories/repository';
+import { Repository } from './repository';
 
 @Injectable()
 export class TransactionsService {
@@ -14,14 +15,15 @@ export class TransactionsService {
   async create(
     createTransactionDto: CreateTransactionDto,
   ): Promise<Transaction> {
-    const convertedAmount = await this.currenciesService.convertCurrency(
+    const convertedAmount = await this.currenciesService.convertToEur(
       Number(createTransactionDto.amount),
-      createTransactionDto.currency,
+      Currency[createTransactionDto.currency],
     );
 
     return this.repository.saveTransaction({
       ...createTransactionDto,
       amount: `${convertedAmount}`,
+      currency: Currency.EUR,
     });
   }
 }

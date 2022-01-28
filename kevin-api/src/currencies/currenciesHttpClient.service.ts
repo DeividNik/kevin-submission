@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import axios from 'axios';
-import { CurreciesRatesReponse } from './types';
+import { CurreciesRatesResponse } from './types';
 
 @Injectable()
 export class CurrenciesHttpClient {
   async getCurreciesRates() {
-    return await axios.get<CurreciesRatesReponse>(
+    return await axios.get<CurreciesRatesResponse>(
       'https://api.exchangerate.host/2021-01-01',
     );
   }

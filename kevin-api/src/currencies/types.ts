@@ -1,4 +1,4 @@
-export type CurreciesRatesReponse = {
+export type CurreciesRatesResponse = {
   motd: {
     msg: string;
     url: string;
