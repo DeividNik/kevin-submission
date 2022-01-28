@@ -1,5 +1,5 @@
-# kevin-submission
-
 # Start up
-- First start the kevin-api after installing npm packages.
-- Then intsall npm packages for kevin-ui and start that on PORT 3001. Required due to CORS setup.
+
+- Run `npm install` in both api and ui directories
+- Then start api first using `npm start`
+- Start react web app using `npm start` in `ui` directory.
