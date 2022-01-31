@@ -12,7 +12,7 @@ export type Rule = {
 
 export const commissionsRules: Rule[] = [];
 
-fs.createReadStream('src/transactions/discounts.csv')
+fs.createReadStream('src/transactions/commissions.csv')
   .pipe(csv())
   .on('data', (data) =>
     commissionsRules.push({

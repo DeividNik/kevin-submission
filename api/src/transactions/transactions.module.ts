@@ -3,7 +3,7 @@ import { TransactionsService } from './transactions.service';
 import { TransactionsController } from './transactions.controller';
 import { Repository } from './repository';
 import { CurrenciesService } from 'src/currencies/currencies.service';
-import { DiscountsService } from './discounts.service';
+import { CommissionsService } from './commissions.service';
 
 @Module({
   controllers: [TransactionsController],
@@ -11,7 +11,7 @@ import { DiscountsService } from './discounts.service';
     TransactionsService,
     Repository,
     CurrenciesService,
-    DiscountsService,
+    CommissionsService,
   ],
 })
 export class TransactionsModule {}

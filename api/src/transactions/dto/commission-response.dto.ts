@@ -1,4 +1,4 @@
-export class TransactionResponseDto {
+export class CommissionResponseDto {
   amount: string;
   currency: string;
 }

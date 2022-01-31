@@ -1,5 +1,4 @@
 import {
-  IsDate,
   IsDateString,
   IsDefined,
   IsEnum,
@@ -22,6 +21,6 @@ export class CreateTransactionDto {
   currency: string;
 
   @IsDefined()
-  @IsNumber()
+  @IsNumberString()
   client_id: number;
 }
